@@ -482,6 +482,130 @@ footer {
     margin-top: 4rem;
 }
 
+/* Mini Music Player */
+.mini-player {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.player-toggle {
+    display: none;
+}
+
+.player-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--accent);
+    background: var(--card-bg);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.player-toggle-btn:hover {
+    background: rgba(107, 142, 125, 0.1);
+    transform: scale(1.05);
+}
+
+.player-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.player-toggle:checked ~ .player-content {
+    max-height: 100px;
+    opacity: 1;
+    padding: 12px;
+}
+
+.player-toggle:checked ~ .player-toggle-btn {
+    border-bottom: 1px solid var(--border);
+    border-radius: 12px 12px 0 0;
+}
+
+.player-album-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.player-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.player-song-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Crimson Pro', serif;
+}
+
+.player-artist {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.player-visualizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sound-wave {
+    width: 50px;
+    height: 30px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+/* Mini Player Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.player-toggle:checked ~ .player-toggle-btn {
+    animation: pulse 2s ease-in-out infinite;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container {
@@ -504,5 +628,18 @@ footer {
         width: 100px;
         height: 100px;
         font-size: 40px;
+    }
+
+    .mini-player {
+        top: 10px;
+        right: 10px;
+    }
+
+    .player-content {
+        max-width: calc(100vw - 80px);
+    }
+
+    .player-info {
+        max-width: 120px;
     }
 }
