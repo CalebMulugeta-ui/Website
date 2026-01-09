@@ -22,7 +22,16 @@
 
     <!-- Mini Music Player -->
     <div class="mini-player">
-        <img src="firstLight.png" alt="Album Cover" class="player-album-cover">
+        <button id="play-pause-btn" class="play-pause-btn" aria-label="Play/Pause">
+            <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+            </svg>
+        </button>
+
+        <img src="https://via.placeholder.com/60x60/6b8e7d/ffffff?text=Album" alt="Album Cover" class="player-album-cover">
 
         <div class="player-info">
             <div class="player-song-title">First Light of Spring</div>
@@ -30,8 +39,8 @@
         </div>
 
         <!-- Background Audio -->
-        <audio id="background-audio" autoplay loop>
-            <source src="FirstLightOfSpring.mp3" type="audio/mpeg">
+        <audio id="background-audio" loop>
+            <source src="music/track1.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
@@ -228,6 +237,24 @@
                     });
                 }
             });
+        });
+
+        // Audio player controls
+        const audio = document.getElementById('background-audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const playIcon = playPauseBtn.querySelector('.play-icon');
+        const pauseIcon = playPauseBtn.querySelector('.pause-icon');
+
+        playPauseBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+            } else {
+                audio.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+            }
         });
     </script>
 </body>
