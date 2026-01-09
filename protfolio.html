@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Mulugeta · Software Developer & CS Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Falling Leaves -->
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="profile-section">
+            <div class="profile-image">
+                <img src="profile-image.jpg" alt="Caleb Mulugeta">
+            </div>
+            <h1>Caleb Mulugeta</h1>
+            <p class="subtitle">Software Developer · CS Student · AI/ML Enthusiast</p>
+            
+            <div class="links">
+                <a href="https://drive.google.com/file/d/1qNAbCoRmJ7UOu5WMbNunZdF13Aplm9nI/view?usp=sharing" target="_blank">Resume</a>
+                <a href="https://github.com/CalebMulugeta-ui" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/calebmulugeta" target="_blank">LinkedIn</a>
+                <a href="mailto:calebmulugeta75@gmail.com">Email</a>
+            </div>
+
+            <div class="separator">····</div>
+
+            <p class="intro">
+                I build systems that learn, scale, and solve real problems.<br>
+                This is my workspace: code, projects, and notes from a CS student learning to ship.
+            </p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#work">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Connect</a>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hey, a bit about me if you're curious :)</p>
+                <p>I'm a second year Computer Science student at Carleton University, specializing in AI and Machine Learning.</p>
+                <p>My journey into tech started with curiosity: breaking things, fixing them, and understanding why systems work the way they do. From multithreaded simulations in C to neural networks in PyTorch, I'm drawn to projects that challenge me to think deeply about performance, concurrency, and intelligent systems.</p>
+                <p>I believe in writing code that's clear, maintainable, and actually solves problems. </p>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section id="work">
+            <h2>Work experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Incoming Software Engineer Intern · <a href="https://www.parallel.com" target="_blank">Parallel</a></h3>
+                </div>
+                <p class="experience-meta">Remote · January 2026 → April 2026</p>
+                <p class="experience-description">
+                    Upcoming role supporting implementation of secure authentication and multicurrency features using Java and Spring Boot for a modern financial platform.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Software Engineer Intern · <a href="https://www.doro.com" target="_blank">Doro</a></h3>
+                </div>
+                <p class="experience-meta">Remote · December 2025 → April 2026</p>
+                <p class="experience-description">
+                    Building production APIs using Python, FastAPI, and PostgreSQL with Firebase authentication. Focused on clean architecture, database design, and secure user authentication flows.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Software Developer · <a href="https://ccss.carleton.ca" target="_blank">Carleton Computer Science Society</a></h3>
+                </div>
+                <p class="experience-meta">Ottawa, ON · April 2025 → August 2025</p>
+                <p class="experience-description">
+                    Contributed to an open-source platform serving 1,000+ students. Built reusable component architecture that standardized UI behavior across production pages.
+                </p>
+                <div class="experience-highlights">
+                    <h4>Key Impact</h4>
+                    <ul>
+                        <li>Developed component-based layout framework with TypeScript and React</li>
+                        <li>Reduced duplicated UI logic by 25% through centralized components</li>
+                        <li>Collaborated in Git-based CI/CD environment with 20-member team</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Teaching Assistant (Java) · Carleton University</h3>
+                </div>
+                <p class="experience-meta">Ottawa, ON · September 2025 → December 2025</p>
+                <p class="experience-description">
+                    Supporting 100+ first-year CS students in mastering Java fundamentals, OOP principles, and data structures. Running weekly office hours with individualized debugging sessions.
+                </p>
+                <div class="experience-highlights">
+                    <h4>What I learned</h4>
+                    <ul>
+                        <li>How to explain complex concepts clearly and debug patiently</li>
+                        <li>The importance of understanding fundamentals before optimization</li>
+                        <li>Code that compiles isn't always correct code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Project shelf</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                A collection of experiments, systems, and shipped projects.
+            </p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">ReallyConnect</h3>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A mentorship platform replacing cold DMs with structured connection requests. Built custom matching algorithm analyzing career fields and goals to create high-quality mentor-mentee pairings.
+                    </p>
+                    <p class="project-tech">Python · MySQL · FastAPI · Supabase</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">Brain Tumor Classifier</h3>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Convolutional Neural Network classifying MRI brain images into four tumor types. Achieved 96% test accuracy using PyTorch's nn.Sequential API, trained over 25 epochs with visualization using Matplotlib.
+                    </p>
+                    <p class="project-tech">Python · PyTorch · Torchvision · Jupyter</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">Ghost Hunter</h3>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Multithreaded ghost hunting simulation coordinating concurrent agents in C. Implemented pathfinding algorithms, bitwise evidence collection, and CSV logging while preventing deadlocks and race conditions in shared memory.
+                    </p>
+                    <p class="project-tech">C · POSIX Threads · Linux</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-content">
+            <h2>Let's Connect</h2>
+            <p class="contact-intro">
+                I'm always interested in conversations about systems, software architecture, and new opportunities to learn and build.
+            </p>
+
+            <ul class="values-list">
+                <li>Writing code that others can understand and maintain</li>
+                <li>Building systems that scale and handle edge cases gracefully</li>
+                <li>Learning by doing, debugging by understanding</li>
+                <li>Shipping projects that solve real problems</li>
+                <li>Teaching and explaining concepts clearly</li>
+            </ul>
+
+            <div class="contact-links">
+                <p>Email: <a href="mailto:calebmulugeta75@gmail.com">calebmulugeta75@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/CalebMulugeta-ui" target="_blank">github.com/CalebMulugeta-ui</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/calebmulugeta" target="_blank">linkedin.com/in/calebmulugeta</a></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>CM</p>
+            <p>Caleb Mulugeta · 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
