@@ -504,6 +504,32 @@ footer {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
+.play-pause-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.play-pause-btn:hover {
+    background: rgba(107, 142, 125, 0.1);
+    border-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.play-pause-btn:active {
+    transform: scale(0.95);
+}
+
 .player-album-cover {
     width: 60px;
     height: 60px;
