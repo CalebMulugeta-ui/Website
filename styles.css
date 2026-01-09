@@ -492,54 +492,16 @@ footer {
     border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.player-toggle {
-    display: none;
-}
-
-.player-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    font-size: 20px;
-    color: var(--accent);
-    background: var(--card-bg);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    user-select: none;
-}
-
-.player-toggle-btn:hover {
-    background: rgba(107, 142, 125, 0.1);
-    transform: scale(1.05);
-}
-
-.player-content {
+    padding: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
-.player-toggle:checked ~ .player-content {
-    max-height: 100px;
-    opacity: 1;
-    padding: 12px;
-}
-
-.player-toggle:checked ~ .player-toggle-btn {
-    border-bottom: 1px solid var(--border);
-    border-radius: 12px 12px 0 0;
+.mini-player:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .player-album-cover {
@@ -578,32 +540,8 @@ footer {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.player-visualizer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.sound-wave {
-    width: 50px;
-    height: 30px;
-    object-fit: contain;
-    opacity: 0.8;
-}
-
-/* Mini Player Animation */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-.player-toggle:checked ~ .player-toggle-btn {
-    animation: pulse 2s ease-in-out infinite;
+#background-audio {
+    display: none;
 }
 
 /* Responsive */
@@ -633,10 +571,7 @@ footer {
     .mini-player {
         top: 10px;
         right: 10px;
-    }
-
-    .player-content {
-        max-width: calc(100vw - 80px);
+        max-width: calc(100vw - 40px);
     }
 
     .player-info {
