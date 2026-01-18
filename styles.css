@@ -416,6 +416,40 @@ h2 {
     font-family: 'IBM Plex Mono', monospace;
 }
 
+/* Ensure the link container is the reference point for the message */
+.clickable-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* The 'Click me' message with an arrow */
+.clickable-card::after {
+    content: "← Click me";
+    position: absolute;
+    left: 102%; /* Positions it just to the right of the card */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--accent);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    
+    /* Initially hidden */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the message on hover */
+.clickable-card:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Contact Section */
 .contact-content {
     text-align: center;
